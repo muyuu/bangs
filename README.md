@@ -1,12 +1,12 @@
-# smoove
+# bangs-js
 
-this code is javascript smoothscroll library for browser(contain ie8).
+this code is javascript adjust height library for browser(contain ie8).
 
 ## dependences
 - jquery@1.12.0
 
 ## install
-npm install --save-dev smoove
+npm install --save-dev bangs-js
 
 ## usage
 
@@ -14,7 +14,7 @@ npm install --save-dev smoove
 
 - html
 ```
-<a class="js-smoove" href="#abc">anchor link</a>
+<a class="js-bangs" href="#abc">anchor link</a>
 
 <div id="abc">
     <!-- code -->
@@ -23,9 +23,9 @@ npm install --save-dev smoove
 
 - javascript
 ```
-var smoove = require("smoove");
+var bangs = require("bangs-js");
 
-smoove();
+bangs();
 
 ```
 
@@ -33,7 +33,7 @@ smoove();
 
 - html
 ```
-<a class="js-smoove" href="#abc">anchor link</a>
+<a class="js-bangs" href="#abc">anchor link</a>
 
 <div id="abc">
     <!-- code -->
@@ -47,5 +47,5 @@ smoove();
 
 - javascript
 ```
-smoove();
+bangs();
 ```
