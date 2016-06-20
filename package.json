@@ -1,6 +1,6 @@
 {
   "name": "bangs-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "adjust height library",
   "main": "bangs.js",
   "scripts": {

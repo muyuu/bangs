@@ -2,7 +2,7 @@
 
 this code is javascript adjust height library for browser(contain ie8).
 
-## dependences
+## dependencies
 - jquery@1.12.0
 
 ## install
@@ -14,10 +14,10 @@ npm install --save-dev bangs-js
 
 - html
 ```
-<a class="js-bangs" href="#abc">anchor link</a>
-
-<div id="abc">
-    <!-- code -->
+<div class="js-bangs">
+    <div class="js-bangs__item">text</div>
+    <div class="js-bangs__item">text</div>
+    <div class="js-bangs__item">text</div>
 </div>
 ```
 
@@ -33,10 +33,10 @@ bangs();
 
 - html
 ```
-<a class="js-bangs" href="#abc">anchor link</a>
-
-<div id="abc">
-    <!-- code -->
+<div class="js-bangs">
+    <div class="js-bangs__item">text</div>
+    <div class="js-bangs__item">text</div>
+    <div class="js-bangs__item">text</div>
 </div>
 
 ...
