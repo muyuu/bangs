@@ -16,7 +16,7 @@ gulp.task("connect", () =>{
 
     options = {
         uri: `http://localhost:${port}/index.html`,
-        app: `Google Chrome`
+        app: "Google Chrome"
     };
 
     gulp.src("./index.html")
@@ -24,45 +24,45 @@ gulp.task("connect", () =>{
 });
 
 
-gulp.task('css', ()=>{
-    gulp.src(['src/css/style.sass'])
+gulp.task("css", ()=>{
+    gulp.src(["src/css/style.sass"])
      .pipe($.sass())
-     .pipe(gulp.dest('./'));
+     .pipe(gulp.dest("./"));
 });
 
 
-gulp.task('babel', ()=>{
+gulp.task("babel", ()=>{
     gulp.src(`src/js/${file}`)
-        .pipe($.babel({
-            presets: ['es2015']
+        .pipe(babel({
+            presets: ["es2015"]
         }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest("./"));
 });
 
-gulp.task('lint', ()=>{
+gulp.task("lint", ()=>{
     gulp.src([`src/${file}`])
         .pipe($.eslint())
         .pipe($.eslint.formatEach());
 });
 
 
-gulp.task('jscs', ()=>{
+gulp.task("jscs", ()=>{
     gulp.src(file)
         .pipe($.jscs());
 });
 
-gulp.task('dev', ['babel'], ()=>{
-    gulp.start(['lint', 'jscs']);
+gulp.task("dev", ["babel"], ()=>{
+    gulp.start(["lint", "jscs"]);
 });
 
-gulp.task("default", ['connect'], ()=>{
+gulp.task("default", ["connect"], ()=>{
     gulp.watch("src/**/*.js", ["dev"]);
     gulp.watch("src/**/*.sass", ["css"]);
 });
 
 
 //build
-gulp.task('build', ['dev'], ()=>{
+gulp.task("build", ["dev"], ()=>{
     gulp.src(file)
         .pipe($.sourcemaps.init())
         .pipe($.rename({
@@ -70,8 +70,8 @@ gulp.task('build', ['dev'], ()=>{
             extname : ".js"
         }))
         .pipe($.uglify())
-        .pipe($.sourcemaps.write('./'))
-        .pipe(gulp.dest('./'));
+        .pipe($.sourcemaps.write("./"))
+        .pipe(gulp.dest("./"));
 });
 
 
